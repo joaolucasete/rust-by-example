@@ -1,8 +1,10 @@
-# Comments
+<!-- # Comments -->
+# Comentários
 
-Any program requires comments, and Rust supports
-a few different varieties:
-
+<!-- Any program requires comments, and Rust supports
+a few different varieties: -->
+Qualquer programa precisa de comentários, e Rust suporta algumas variedades diferentes:
+<!--  
 * *Regular comments* which are ignored by the compiler:
    * `// Line comments which go to the end of the line.`
    * `/* Block comments which go to the closing delimiter. */`
@@ -10,8 +12,19 @@ a few different varieties:
   [documentation][docs]:
    * `/// Generate library docs for the following item.`
    * `//! Generate library docs for the enclosing item.`
+ -->
 
-```rust,editable
+ 
+* *Comentários regulares* são ignorados pelo compilador:
+   * `// Comentário de linha que vai até o final da linha.`
+   * `/* Comentário de bloco que vai até o fechamento do delimitador. */`
+* *Comentários de documentação* são analisados na biblioteca html
+  [documentação][docs]:
+   * `/// Gere documentos da biblioteca para o seguinte item.`
+   * `//! Gere documentos da biblioteca para o item anexo.`
+
+
+<!-- ```rust,editable
 fn main() {
     // This is an example of a line comment
     // There are two slashes at the beginning of the line
@@ -42,10 +55,47 @@ fn main() {
     println!("Is `x` 10 or 100? x = {}", x);
 }
 
+``` -->
+```rust, editável
+fn main() {
+    // Esse é um exemplo de comentário de linha
+    // Existem duas barras no início da linha
+    // E nada escrito dentros dessas será lido pelo compilador.
+
+    // println!("Olá, mundo!");
+
+    // Execute isso. Vê? Agora tente deletar as duas barras, e execute denovo.
+
+    /* 
+     * Esse é outro tipo de comentário, um comentário de bloco. E geral,
+     * comentários de linha são o estilo de comentário recomendado. mas
+     * comentários de bloco são extremamente úteis para desativar temporariamente
+     * pedaços de código. /* Comentários de blocos podem ser /* aninhados, */ */
+     * portanto são necessários apenas algumas tecla para comentar tudo
+     * nesta função main(). /*/*/* Tente você mesmo! */*/*/
+     */
+
+    /*
+    Observe: A coluna anterior de `*` era inteiramente de estilo.
+    Não há necessidade atual para isso.
+    */
+
+    // Você pode manipular mais facilmente expressões com comentário de bloco
+    // do que com comentário de linha. Tente excluir os delimitadores de comentário
+    // para mudar o resultado:
+    let x = 5 + /* 90 + */ 5;
+    println!("`x` é 10 ou 100? x = {}", x);
+}
+
 ```
 
-### See also:
+<!-- ### See also:
 
 [Library documentation][docs]
+
+[docs]: ../meta/doc.md -->
+### Veja também:
+
+[Documentação da biblioteca][docs]
 
 [docs]: ../meta/doc.md
